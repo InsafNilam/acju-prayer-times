@@ -109,7 +109,7 @@ class PDFParser:
                 "date": parsed_date,
                 "fajr": clean_time(str(row[1] or "")),
                 "sunrise": clean_time(str(row[2] or "")),
-                "luhar": clean_time(str(row[3] or "")),
+                "dhuhr": clean_time(str(row[3] or "")),
                 "asr": clean_time(str(row[4] or "")),
                 "maghrib": clean_time(str(row[5] or "")),
                 "isha": clean_time(str(row[6] or "")) if len(row) > 6 else ""
@@ -153,7 +153,7 @@ class PDFParser:
         prayer_times = []
         
         for match in matches:
-            day1, _, _, day2, fajr, sunrise, luhar, asr, maghrib, isha = match
+            day1, _, _, day2, fajr, sunrise, dhuhr, asr, maghrib, isha = match
             day = day1 or day2
             
             parsed_date = f"{month}-{int(day):02d}"
@@ -161,7 +161,7 @@ class PDFParser:
                 "date": parsed_date,
                 "fajr": fajr.strip(),
                 "sunrise": sunrise.strip(),
-                "luhar": luhar.strip(),
+                "dhuhr": dhuhr.strip(),
                 "asr": asr.strip(),
                 "maghrib": maghrib.strip() if maghrib else "",
                 "isha": isha.strip() if isha else ""

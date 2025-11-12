@@ -6,7 +6,7 @@ A Python application that scrapes prayer times from the ACJU (All Ceylon Jamiyya
 
 - 🌐 Web scraping of ACJU prayer times website
 - 📄 PDF download and parsing
-- 🕌 Extraction of prayer times (Fajr, Sunrise, Luhar, Asr, Maghrib, Isha)
+- 🕌 Extraction of prayer times (Fajr, Sunrise, Dhuhr, Asr, Maghrib, Isha)
 - 🗺️ Zone-to-city mapping for Sri Lankan districts
 - 📊 Structured JSON output with timezone information
 
@@ -101,7 +101,7 @@ The generated JSON follows this structure:
         "01-01": {
           "fajr": "5:15 AM",
           "sunrise": "6:30 AM",
-          "luhar": "12:15 PM",
+          "dhuhr": "12:15 PM",
           "asr": {
             "shafi": "3:30 PM",
             "hanafi": "3:30 PM"
